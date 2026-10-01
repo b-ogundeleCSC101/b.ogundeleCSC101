@@ -24,19 +24,19 @@ fn main() {
 
     if age >= 40.0 && experienced == "yes"
     {
-        println!("Annual incentive is: {}", input1);
+        println!("Annual incentive is: {} naira", input1);
     }
     else if age >=30.0 && age <=39.0 && experienced == "yes"
     {
-        println!("Annual Incentive is: {}", input2);
+        println!("Annual Incentive is: {} naira", input2);
     }
     else if age <28.0 && experienced == "yes"
     {
-        println!("Annual Incentive is: {}", input3);
+        println!("Annual Incentive is: {} naira", input3);
     }
     else if experienced == "no"
     {
-        println!("Annual Incentive is: {}", input4);
+        println!("Annual Incentive is: {} naira", input4);
     }
     else {
         println!("Please enter Yes or No for experience.");
