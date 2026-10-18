@@ -4,10 +4,28 @@ fn main() {
     println!("Welcome to APS Public Service level checker");
     println!("Please enter your name to continue");
 
-    let mut name = String::new();
-    io::stdin().read_line(&mut name).expect("Failed to read name");
-    let name = name.trim();
-
+    let name = loop {
+    println!("Please enter your name to continue");
+    let mut text = String::new();
+    io::stdin().read_line(&mut text).expect("Failed to read line");
+    let text = text.trim();
+    let mut valid = true;
+    if text.is_empty() {
+        valid = false;
+            }
+        for c in text.chars() {
+            if !c.is_alphabetic() && c != ' ' {
+                valid = false;
+            }
+        }
+        if valid {
+            break text.to_string();
+        }
+        else {
+            println!("Sorry, incorrect format. Try Again Using letters only.")
+        }
+    };
+    
     let dept_name = loop { 
     println!("Enter Department");
     println!("[O] OFFICE ADMIN");
